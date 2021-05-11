@@ -28,11 +28,12 @@ class EncuestaController extends Controller
     }
 
     public function recibir(Request $request){
-
+        dd($request->all());
         $nombre = $request->input('nombre');
-        $email = $request->input('email');
+        $documento = $request->input('documento');
+        $cargo = $request->input('cargo');
 
-        return "EL nombre es: $nombre y el email es $email";
+        return "EL nombre es: $nombre y el email es $documento $cargo";
         var_dump($nombre);
    
     }
